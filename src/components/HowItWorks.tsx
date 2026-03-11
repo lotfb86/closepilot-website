@@ -5,39 +5,39 @@ import { useRef } from "react";
 
 const steps = [
   {
-    phase: "Week 1–2",
-    title: "Discovery & Audit",
+    phase: "Free",
+    title: "Your Free Website & AI Audit",
     description:
-      "We analyze your current operations, tech stack, and workflows. We identify exactly where AI creates the biggest impact — and the quick wins you can deploy this week.",
+      "Book a meeting. We build you a custom $50K-value website and deliver a $30K AI audit of your operations — free, before you spend a dollar. You keep both no matter what.",
     details: [
-      "Full brokerage workflow audit",
-      "Tech stack compatibility review",
-      "Revenue opportunity mapping",
-      "Custom AI deployment roadmap",
+      "Custom brokerage website",
+      "Full operations AI audit",
+      "Implementation roadmap",
+      "Zero cost, zero obligation",
     ],
   },
   {
-    phase: "Week 2–4",
-    title: "Build & Deploy",
+    phase: "Week 1–4",
+    title: "Hands-On Coaching",
     description:
-      "We build your AI agents, configure your workflows, and install your automated systems. You learn how everything works so you own it completely.",
+      "We teach you to build and deploy AI agents, design automated workflows, and set up the systems that will run your brokerage. You learn by doing — with a coach guiding every step.",
     details: [
-      "Custom AI agent configuration",
-      "Workflow automation setup",
-      "Website & marketing deployment",
-      "Hands-on team training",
+      "1-on-1 coaching sessions",
+      "AI agent building training",
+      "Workflow design & automation",
+      "Tool setup & configuration",
     ],
   },
   {
     phase: "Ongoing",
-    title: "Scale & Optimize",
+    title: "Continuous Growth",
     description:
-      "Your AI systems go live. We monitor performance, optimize results, and continuously expand capabilities. Your brokerage gets smarter every week.",
+      "AI moves fast. Our ongoing coaching keeps you ahead — new tools, new techniques, new capabilities. Your brokerage gets smarter every month, and so do you.",
     details: [
-      "Performance monitoring & tuning",
-      "Continuous coaching & support",
-      "New capability deployment",
-      "Competitive advantage expansion",
+      "Monthly coaching sessions",
+      "New tool & technique training",
+      "Strategy & performance reviews",
+      "Priority support between sessions",
     ],
   },
 ];
@@ -59,11 +59,11 @@ export default function HowItWorks() {
             Our Approach
           </p>
           <h2 className="text-3xl md:text-[2.75rem] font-serif font-medium leading-[1.15] tracking-tight">
-            From zero AI to full operations in 90 days.
+            Free deliverables first. Coaching when you&apos;re ready.
           </h2>
           <p className="text-text-2 text-lg mt-5 leading-relaxed">
-            No fluff. No theory. Real AI systems installed into your brokerage,
-            with training so you can run them independently.
+            No fluff. No theory. We start by proving what AI can do — then
+            we teach you to do it yourself.
           </p>
         </motion.div>
 

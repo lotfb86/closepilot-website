@@ -20,12 +20,12 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5">
               {[
-                "AI Agent Deployment",
+                "AI Agent Coaching",
                 "Workflow Automation",
-                "Website Development",
+                "Website Coaching",
                 "Marketing Systems",
                 "Competitive Intelligence",
-                "AI Training",
+                "Ongoing Coaching",
               ].map((item) => (
                 <li key={item}>
                   <a

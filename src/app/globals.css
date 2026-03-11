@@ -1,19 +1,22 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #050a14;
-  --color-foreground: #e8edf5;
-  --color-muted: #8494a7;
-  --color-accent: #00c2ff;
-  --color-accent-2: #7c5cfc;
-  --color-accent-3: #ff6b35;
-  --color-surface: #0c1222;
-  --color-surface-2: #111a2e;
-  --color-border: #1a2540;
-  --color-border-2: #243154;
-  --color-gold: #f5a623;
+  --color-base: #FAF9F6;
+  --color-surface: #FFFFFF;
+  --color-dark: #1A1F2E;
+  --color-dark-2: #252B3B;
+  --color-text: #1A1F2E;
+  --color-text-2: #6E7681;
+  --color-text-3: #9CA3AF;
+  --color-accent: #1A5632;
+  --color-accent-light: #F0F5F1;
+  --color-accent-hover: #0D3B1F;
+  --color-gold: #B8860B;
+  --color-gold-light: #FBF7ED;
+  --color-border: #E5E5E0;
+  --color-border-2: #D4D4CF;
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-playfair);
 }
 
 html {
@@ -21,164 +24,54 @@ html {
 }
 
 body {
-  background: var(--color-background);
-  color: var(--color-foreground);
+  background: var(--color-base);
+  color: var(--color-text);
   font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Premium gradient text */
-.gradient-text {
-  background: linear-gradient(135deg, #00c2ff 0%, #7c5cfc 50%, #ff6b35 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+h1, h2, h3 {
+  font-family: var(--font-serif), Georgia, serif;
 }
 
-.gradient-text-subtle {
-  background: linear-gradient(135deg, #e8edf5 0%, #00c2ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Animated gradient border */
-.gradient-border {
-  position: relative;
-  background: var(--color-surface);
-  border-radius: 16px;
-}
-
-.gradient-border::before {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  border-radius: 17px;
-  padding: 1px;
-  background: linear-gradient(135deg, rgba(0, 194, 255, 0.3), rgba(124, 92, 252, 0.3), rgba(255, 107, 53, 0.1));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
-/* Glow effects */
-.glow-accent {
-  box-shadow: 0 0 60px rgba(0, 194, 255, 0.15), 0 0 120px rgba(124, 92, 252, 0.08);
-}
-
-.glow-accent-sm {
-  box-shadow: 0 0 30px rgba(0, 194, 255, 0.1), 0 0 60px rgba(124, 92, 252, 0.05);
-}
-
-/* Noise texture overlay */
-.noise-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Grid pattern background */
-.grid-bg {
-  background-image:
-    linear-gradient(rgba(26, 37, 64, 0.5) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(26, 37, 64, 0.5) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-
-/* Radial gradient spotlight */
-.spotlight {
-  background: radial-gradient(ellipse 800px 600px at 50% 0%, rgba(0, 194, 255, 0.08), transparent 70%);
-}
-
-.spotlight-purple {
-  background: radial-gradient(ellipse 600px 400px at 50% 50%, rgba(124, 92, 252, 0.06), transparent 70%);
-}
-
-/* Smooth button hover */
-.btn-primary {
-  background: linear-gradient(135deg, #00c2ff, #7c5cfc);
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  box-shadow: 0 8px 32px rgba(0, 194, 255, 0.3), 0 4px 16px rgba(124, 92, 252, 0.2);
-  transform: translateY(-1px);
-}
-
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-}
-
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(0, 194, 255, 0.3);
-}
-
-/* Card hover */
-.card-hover {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 194, 255, 0.05);
-}
-
-.card-hover:hover::before {
-  background: linear-gradient(135deg, rgba(0, 194, 255, 0.5), rgba(124, 92, 252, 0.5), rgba(255, 107, 53, 0.2));
-}
-
-/* Animated dash border for empty states */
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-/* Stat counter animation */
-@keyframes countUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Subtle float animation */
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-/* Marquee for social proof */
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-marquee {
-  animation: marquee 30s linear infinite;
-}
-
-/* Hide scrollbar */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-/* Selection color */
 ::selection {
-  background: rgba(0, 194, 255, 0.3);
-  color: #fff;
+  background: rgba(26, 86, 50, 0.12);
+  color: var(--color-dark);
+}
+
+/* Subtle fade-in for scroll animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Premium card style */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+/* Divider line */
+.divider {
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* Warm noise texture */
+.warm-texture {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.015'/%3E%3C/svg%3E");
 }

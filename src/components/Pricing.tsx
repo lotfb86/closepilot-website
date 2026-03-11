@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Check, ArrowRight, Sparkles } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 
 const plans = [
   {
@@ -10,16 +10,15 @@ const plans = [
     price: "2,497",
     period: "one-time",
     description:
-      "The quickest path to your first AI wins. Perfect for brokers who want to test the waters with proven systems.",
+      "Your first AI wins. Proven systems deployed into your brokerage within two weeks.",
     features: [
       "Full brokerage workflow audit",
       "3 custom AI agents deployed",
       "Lead nurturing automation",
-      "AI-powered website buildout",
-      "2 weeks of hands-on training",
+      "AI-powered website build",
+      "2 weeks hands-on training",
       "30 days of support",
     ],
-    cta: "Get Started",
     highlight: false,
   },
   {
@@ -27,18 +26,17 @@ const plans = [
     price: "4,997",
     period: "one-time",
     description:
-      "The complete AI transformation. We rebuild your entire operation with AI and train you to run it independently.",
+      "The complete transformation. We rebuild your entire operation with AI and train you to own it.",
     features: [
       "Everything in Launchpad",
-      "10+ custom AI agents deployed",
+      "10+ custom AI agents",
       "Complete workflow automation",
       "AI marketing campaign system",
       "Competitive intelligence setup",
       "Custom CRM integrations",
-      "4 weeks of intensive training",
-      "90 days of coaching & support",
+      "4 weeks intensive training",
+      "90 days coaching & support",
     ],
-    cta: "Get Started",
     highlight: true,
   },
   {
@@ -46,113 +44,127 @@ const plans = [
     price: "1,997",
     period: "/month",
     description:
-      "Ongoing AI partnership. We continuously build, optimize, and expand your AI operations as technology evolves.",
+      "Ongoing partnership. We continuously expand your AI operations as technology evolves.",
     features: [
       "Everything in Accelerator",
-      "Unlimited AI agent deployment",
+      "Unlimited agent deployment",
       "Monthly strategy sessions",
       "Priority support & coaching",
-      "New tool integration as released",
-      "Dedicated AI operations manager",
+      "New tool integration",
+      "Dedicated AI ops manager",
       "Quarterly performance reviews",
       "Early access to new capabilities",
     ],
-    cta: "Apply Now",
     highlight: false,
   },
 ];
 
 export default function Pricing() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="pricing" className="relative py-24 lg:py-32">
-      <div className="absolute inset-0 spotlight-purple" />
-
-      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="pricing" className="relative py-24 lg:py-32 bg-accent-light">
+      <div ref={ref} className="max-w-6xl mx-auto px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          className="text-center"
+          transition={{ duration: 0.6 }}
+          className="max-w-2xl mb-16"
         >
-          <span className="inline-block text-sm font-semibold text-accent-2 uppercase tracking-widest mb-4">
+          <p className="text-[13px] uppercase tracking-[0.12em] text-accent font-medium mb-5">
             Investment
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight max-w-3xl mx-auto">
-            Choose Your{" "}
-            <span className="gradient-text">Competitive Edge</span>
+          </p>
+          <h2 className="text-3xl md:text-[2.75rem] font-serif font-medium leading-[1.15] tracking-tight">
+            Every plan pays for itself within the first month.
           </h2>
-          <p className="text-lg text-muted max-w-2xl mx-auto mt-5 leading-relaxed">
-            Every plan pays for itself within the first 30 days. The question
-            isn&apos;t whether you can afford it — it&apos;s whether you can
-            afford to wait.
+          <p className="text-text-2 text-lg mt-5 leading-relaxed">
+            The question isn&apos;t whether you can afford it. It&apos;s whether
+            you can afford to wait.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-5 mt-16 items-start">
+        <div className="grid lg:grid-cols-3 gap-6 items-start">
           {plans.map((plan, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
-              className={`relative rounded-2xl p-8 ${
+              transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+              className={`rounded-2xl p-8 ${
                 plan.highlight
-                  ? "bg-gradient-to-b from-accent/5 to-accent-2/5 border-2 border-accent/30"
-                  : "gradient-border"
-              } card-hover`}
+                  ? "bg-dark text-white ring-1 ring-dark"
+                  : "card"
+              }`}
             >
               {plan.highlight && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                  <div className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-accent to-accent-2 text-white text-xs font-semibold">
-                    <Sparkles size={12} />
-                    Most Popular
-                  </div>
-                </div>
+                <span className="inline-block text-[11px] uppercase tracking-[0.1em] font-medium text-white/50 bg-white/10 px-3 py-1 rounded-full mb-5">
+                  Most Popular
+                </span>
               )}
 
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-foreground">
-                  {plan.name}
-                </h3>
-                <div className="flex items-baseline gap-1 mt-3">
-                  <span className="text-4xl font-bold text-foreground">
-                    ${plan.price}
-                  </span>
-                  <span className="text-muted text-sm">{plan.period}</span>
-                </div>
-                <p className="text-muted text-sm mt-3 leading-relaxed">
-                  {plan.description}
-                </p>
+              <h3
+                className={`text-lg font-semibold ${
+                  plan.highlight ? "text-white" : "text-dark"
+                }`}
+              >
+                {plan.name}
+              </h3>
+              <div className="flex items-baseline gap-1 mt-3">
+                <span
+                  className={`text-4xl font-serif font-medium ${
+                    plan.highlight ? "text-white" : "text-dark"
+                  }`}
+                >
+                  ${plan.price}
+                </span>
+                <span
+                  className={`text-sm ${
+                    plan.highlight ? "text-white/50" : "text-text-3"
+                  }`}
+                >
+                  {plan.period}
+                </span>
               </div>
+              <p
+                className={`text-sm mt-3 leading-relaxed ${
+                  plan.highlight ? "text-white/60" : "text-text-2"
+                }`}
+              >
+                {plan.description}
+              </p>
 
-              <div className="space-y-3 mb-8">
+              <div className="space-y-3 mt-8 mb-8">
                 {plan.features.map((feature, j) => (
                   <div key={j} className="flex items-start gap-3">
                     <Check
-                      size={16}
+                      size={15}
                       className={`flex-shrink-0 mt-0.5 ${
-                        plan.highlight ? "text-accent" : "text-accent/70"
+                        plan.highlight ? "text-white/40" : "text-accent"
                       }`}
                     />
-                    <span className="text-sm text-muted">{feature}</span>
+                    <span
+                      className={`text-[14px] ${
+                        plan.highlight ? "text-white/70" : "text-text-2"
+                      }`}
+                    >
+                      {feature}
+                    </span>
                   </div>
                 ))}
               </div>
 
               <a
                 href="#"
-                className={`group flex items-center justify-center gap-2 w-full py-3.5 rounded-xl text-sm font-semibold transition-all ${
+                className={`group flex items-center justify-center gap-2 w-full py-3.5 rounded-full text-[14px] font-medium transition-all duration-300 ${
                   plan.highlight
-                    ? "btn-primary text-white"
-                    : "btn-secondary text-foreground"
+                    ? "bg-white text-dark hover:bg-white/90"
+                    : "bg-dark text-base hover:bg-dark-2"
                 }`}
               >
-                {plan.cta}
+                Get Started
                 <ArrowRight
-                  size={16}
+                  size={14}
                   className="transition-transform group-hover:translate-x-0.5"
                 />
               </a>
@@ -160,26 +172,15 @@ export default function Pricing() {
           ))}
         </div>
 
-        {/* Guarantee */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="text-center mt-14"
+          className="text-center text-sm text-text-2 mt-12"
         >
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-surface-2 border border-border">
-            <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
-              <Check size={16} className="text-accent" />
-            </div>
-            <span className="text-sm text-muted">
-              <strong className="text-foreground">
-                30-Day ROI Guarantee.
-              </strong>{" "}
-              If your AI systems don&apos;t pay for themselves in the first
-              month, we work for free until they do.
-            </span>
-          </div>
-        </motion.div>
+          30-day ROI guarantee — if your AI systems don&apos;t pay for
+          themselves in the first month, we work free until they do.
+        </motion.p>
       </div>
     </section>
   );

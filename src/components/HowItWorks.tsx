@@ -2,15 +2,13 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Search, Cpu, Rocket } from "lucide-react";
 
 const steps = [
   {
-    number: "01",
-    icon: Search,
+    phase: "Week 1–2",
     title: "Discovery & Audit",
     description:
-      "We analyze your current operations, tech stack, and workflows. We identify exactly where AI can create the biggest impact — and the quickest wins you can deploy this week.",
+      "We analyze your current operations, tech stack, and workflows. We identify exactly where AI creates the biggest impact — and the quick wins you can deploy this week.",
     details: [
       "Full brokerage workflow audit",
       "Tech stack compatibility review",
@@ -19,28 +17,26 @@ const steps = [
     ],
   },
   {
-    number: "02",
-    icon: Cpu,
+    phase: "Week 2–4",
     title: "Build & Deploy",
     description:
-      "We build your AI agents, set up your intelligent workflows, and install your automated systems. You learn exactly how everything works so you own it completely.",
+      "We build your AI agents, configure your workflows, and install your automated systems. You learn how everything works so you own it completely.",
     details: [
       "Custom AI agent configuration",
       "Workflow automation setup",
       "Website & marketing deployment",
-      "Hands-on training for your team",
+      "Hands-on team training",
     ],
   },
   {
-    number: "03",
-    icon: Rocket,
+    phase: "Ongoing",
     title: "Scale & Optimize",
     description:
-      "Your AI systems go live. We monitor performance, optimize results, and continuously add new capabilities. Your brokerage gets smarter every single week.",
+      "Your AI systems go live. We monitor performance, optimize results, and continuously expand capabilities. Your brokerage gets smarter every week.",
     details: [
       "Performance monitoring & tuning",
-      "Ongoing coaching & support",
-      "New agent deployment",
+      "Continuous coaching & support",
+      "New capability deployment",
       "Competitive advantage expansion",
     ],
   },
@@ -48,75 +44,63 @@ const steps = [
 
 export default function HowItWorks() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="how-it-works" className="relative py-24 lg:py-32">
-      <div className="absolute inset-0 spotlight-purple" />
-
-      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="approach" className="relative py-24 lg:py-32 bg-accent-light">
+      <div ref={ref} className="max-w-6xl mx-auto px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          className="text-center"
+          transition={{ duration: 0.6 }}
+          className="max-w-2xl mb-16"
         >
-          <span className="inline-block text-sm font-semibold text-accent-2 uppercase tracking-widest mb-4">
-            The Process
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight max-w-3xl mx-auto">
-            From Zero AI to{" "}
-            <span className="gradient-text">Full Autopilot</span> in 90 Days
+          <p className="text-[13px] uppercase tracking-[0.12em] text-accent font-medium mb-5">
+            Our Approach
+          </p>
+          <h2 className="text-3xl md:text-[2.75rem] font-serif font-medium leading-[1.15] tracking-tight">
+            From zero AI to full operations in 90 days.
           </h2>
-          <p className="text-lg text-muted max-w-2xl mx-auto mt-5 leading-relaxed">
-            No fluff. No theory. We install real AI systems into your brokerage
-            and teach you how to run them like a pro.
+          <p className="text-text-2 text-lg mt-5 leading-relaxed">
+            No fluff. No theory. Real AI systems installed into your brokerage,
+            with training so you can run them independently.
           </p>
         </motion.div>
 
-        <div className="mt-16 space-y-6">
-          {steps.map((step, i) => {
-            const Icon = step.icon;
-            return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.15 + i * 0.15 }}
-                className="gradient-border card-hover rounded-2xl p-8 md:p-10"
-              >
-                <div className="flex flex-col lg:flex-row lg:items-start gap-8">
-                  {/* Step number and icon */}
-                  <div className="flex items-center gap-5 lg:flex-shrink-0 lg:w-48">
-                    <span className="text-5xl font-bold text-border-2 font-mono">
-                      {step.number}
-                    </span>
-                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent/20 to-accent-2/20 border border-accent/20 flex items-center justify-center">
-                      <Icon size={24} className="text-accent" />
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">
-                      {step.title}
-                    </h3>
-                    <p className="text-muted leading-relaxed mb-6 max-w-2xl">
-                      {step.description}
-                    </p>
-                    <div className="grid sm:grid-cols-2 gap-3">
-                      {step.details.map((detail, j) => (
-                        <div key={j} className="flex items-center gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
-                          <span className="text-sm text-muted">{detail}</span>
-                        </div>
-                      ))}
-                    </div>
+        <div className="space-y-6">
+          {steps.map((step, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 24 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.1 + i * 0.12 }}
+              className="card p-8 md:p-10"
+            >
+              <div className="flex flex-col lg:flex-row lg:items-start gap-8">
+                <div className="lg:w-48 flex-shrink-0">
+                  <span className="inline-block text-[12px] uppercase tracking-[0.1em] font-medium text-accent bg-accent/8 px-3 py-1.5 rounded-full">
+                    {step.phase}
+                  </span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl md:text-2xl font-serif font-medium text-dark mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-text-2 leading-relaxed mb-6 max-w-2xl">
+                    {step.description}
+                  </p>
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    {step.details.map((detail, j) => (
+                      <div key={j} className="flex items-center gap-3">
+                        <span className="w-1 h-1 rounded-full bg-accent flex-shrink-0" />
+                        <span className="text-sm text-text-2">{detail}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              </motion.div>
-            );
-          })}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

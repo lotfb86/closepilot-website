@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import Offer from "@/components/Offer";
 import Problem from "@/components/Problem";
 import Solution from "@/components/Solution";
 import HowItWorks from "@/components/HowItWorks";
@@ -14,6 +15,7 @@ export default function Home() {
     <main className="relative">
       <Navigation />
       <Hero />
+      <Offer />
       <Problem />
       <Solution />
       <HowItWorks />

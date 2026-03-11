@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "#approach", label: "Approach" },
+  { href: "#offer", label: "Free Offer" },
   { href: "#services", label: "Services" },
+  { href: "#approach", label: "Approach" },
   { href: "#results", label: "Results" },
   { href: "#pricing", label: "Pricing" },
-  { href: "#faq", label: "FAQ" },
 ];
 
 export default function Navigation() {
@@ -55,10 +55,10 @@ export default function Navigation() {
           {/* CTA */}
           <div className="hidden lg:block">
             <a
-              href="#pricing"
+              href="#offer"
               className="inline-flex items-center px-6 py-2.5 text-[13px] uppercase tracking-[0.06em] font-medium bg-dark text-base rounded-full hover:bg-dark-2 transition-colors duration-300"
             >
-              Get Started
+              Claim Free Website
             </a>
           </div>
 
@@ -94,11 +94,11 @@ export default function Navigation() {
                 </a>
               ))}
               <a
-                href="#pricing"
+                href="#offer"
                 onClick={() => setMobileOpen(false)}
                 className="inline-flex items-center px-6 py-3 text-[13px] uppercase tracking-[0.06em] font-medium bg-dark text-base rounded-full mt-4"
               >
-                Get Started
+                Claim Free Website
               </a>
             </div>
           </motion.div>

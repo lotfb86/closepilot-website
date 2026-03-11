@@ -76,11 +76,12 @@ export default function Pricing() {
             Investment
           </p>
           <h2 className="text-3xl md:text-[2.75rem] font-serif font-medium leading-[1.15] tracking-tight">
-            Every plan pays for itself within the first month.
+            After your free website and audit, here&apos;s what comes next.
           </h2>
           <p className="text-text-2 text-lg mt-5 leading-relaxed">
-            The question isn&apos;t whether you can afford it. It&apos;s whether
-            you can afford to wait.
+            Every engagement starts with $80,000 in free deliverables. When
+            you&apos;re ready to go deeper, every plan pays for itself within
+            the first month.
           </p>
         </motion.div>
 
@@ -162,7 +163,7 @@ export default function Pricing() {
                     : "bg-dark text-base hover:bg-dark-2"
                 }`}
               >
-                Get Started
+                Book a free consultation
                 <ArrowRight
                   size={14}
                   className="transition-transform group-hover:translate-x-0.5"

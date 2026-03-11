@@ -40,18 +40,38 @@ export default function Hero() {
             outperform anyone in your market.
           </motion.p>
 
+          {/* Offer callout */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.45 }}
+            className="mt-8 p-5 rounded-xl border border-accent/15 bg-accent-light"
+          >
+            <p className="text-[15px] text-dark leading-relaxed">
+              <span className="font-semibold">$80,000 in value. Free.</span>
+              {" "}Book a consultation and we&apos;ll build you a{" "}
+              <span className="font-semibold">$50K custom website</span> and
+              deliver a{" "}
+              <span className="font-semibold">$30K AI audit</span> of
+              your brokerage — before you spend a dollar.{" "}
+              <a href="#offer" className="underline underline-offset-2 font-semibold text-accent hover:text-dark transition-colors">
+                Here&apos;s why &darr;
+              </a>
+            </p>
+          </motion.div>
+
           {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-col sm:flex-row items-start gap-4 mt-10"
+            transition={{ duration: 0.6, delay: 0.55 }}
+            className="flex flex-col sm:flex-row items-start gap-4 mt-8"
           >
             <a
-              href="#pricing"
+              href="#offer"
               className="group inline-flex items-center gap-2.5 px-8 py-4 bg-dark text-base rounded-full text-[15px] font-medium hover:bg-dark-2 transition-colors duration-300"
             >
-              Start your transformation
+              Claim your free website
               <ArrowRight
                 size={16}
                 className="transition-transform group-hover:translate-x-0.5"
@@ -61,49 +81,19 @@ export default function Hero() {
               href="#approach"
               className="inline-flex items-center px-8 py-4 text-[15px] font-medium text-dark border border-border rounded-full hover:border-dark/30 transition-colors duration-300"
             >
-              See our approach
+              See how it works
             </a>
           </motion.div>
         </div>
       </div>
 
-      {/* Decorative element — subtle geometric */}
+      {/* Decorative element */}
       <div className="hidden lg:block absolute top-32 right-12 xl:right-24 w-[380px] h-[460px] opacity-[0.04]">
         <svg viewBox="0 0 380 460" fill="none">
-          <rect
-            x="20"
-            y="20"
-            width="340"
-            height="420"
-            rx="8"
-            stroke="#1A1F2E"
-            strokeWidth="1"
-          />
-          <rect
-            x="50"
-            y="60"
-            width="280"
-            height="340"
-            rx="6"
-            stroke="#1A1F2E"
-            strokeWidth="0.5"
-          />
-          <line
-            x1="50"
-            y1="200"
-            x2="330"
-            y2="200"
-            stroke="#1A1F2E"
-            strokeWidth="0.5"
-          />
-          <line
-            x1="190"
-            y1="60"
-            x2="190"
-            y2="400"
-            stroke="#1A1F2E"
-            strokeWidth="0.5"
-          />
+          <rect x="20" y="20" width="340" height="420" rx="8" stroke="#1A1F2E" strokeWidth="1" />
+          <rect x="50" y="60" width="280" height="340" rx="6" stroke="#1A1F2E" strokeWidth="0.5" />
+          <line x1="50" y1="200" x2="330" y2="200" stroke="#1A1F2E" strokeWidth="0.5" />
+          <line x1="190" y1="60" x2="190" y2="400" stroke="#1A1F2E" strokeWidth="0.5" />
         </svg>
       </div>
     </section>

@@ -28,14 +28,15 @@ export default function Problem() {
               The Problem
             </p>
             <h2 className="text-3xl md:text-4xl font-serif font-medium leading-[1.15] tracking-tight text-white">
-              The mega-brokerages have teams of fifty. You have three. And right
-              now, they&apos;re winning.
+              You&apos;re running a 3-person brokerage against firms with
+              50-person teams. That math doesn&apos;t work — unless you
+              change the math.
             </h2>
             <div className="space-y-5 mt-8">
               {[
-                "They're outspending you on marketing, outpacing your follow-ups, and outscaling you in every direction.",
-                "You're spending 60% of your day on tasks that should take minutes — CRM updates, follow-up sequences, market reports, compliance.",
-                "You know AI is the answer. But every tool you've tried is either too complex, too generic, or doesn't understand real estate.",
+                "They have dedicated marketing teams, full-time admins, and entire departments for compliance and follow-ups. You have you, and maybe two other people wearing ten hats each.",
+                "You're spending 60% of your day on tasks that should take minutes — CRM updates, follow-up sequences, market reports, listing descriptions, compliance paperwork. Every hour you spend on admin is an hour you're not closing.",
+                "You know AI is the equalizer. But every tool you've tried is either too complex, too generic, or built for tech companies — not brokerages.",
               ].map((text, i) => (
                 <p
                   key={i}

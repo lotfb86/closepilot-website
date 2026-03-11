@@ -6,6 +6,16 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
+    question: "Is the free website really worth $50,000?",
+    answer:
+      "Yes. We build you the same caliber of custom, conversion-optimized brokerage website that design agencies charge $30K–$75K for. Same quality. Same functionality. The difference is how we build it — using AI tools and workflows that let us deliver in days what used to take months. That's the entire point: when you see what AI built, you understand what it can do for the rest of your business.",
+  },
+  {
+    question: "What's the catch with the free offer?",
+    answer:
+      "There is no catch. You get a custom website and a complete AI audit, and you keep both whether you hire us or not. We do this because the deliverables are the proof — once you see what AI can do for your website and operations, most people want us to do it for the rest of their business. But if you don't? You still walk away with $80,000 in value.",
+  },
+  {
     question: "I'm not technical. Can I actually use this?",
     answer:
       "That's exactly who we built this for. Our approach is designed for brokers, not developers. We set up everything, then teach you to manage it in plain English. If you can use a smartphone, you can run your AI systems.",
@@ -13,17 +23,17 @@ const faqs = [
   {
     question: "How is this different from just using ChatGPT?",
     answer:
-      "ChatGPT is a single tool. What we build is an entire AI workforce integrated into your operations — autonomous agents handling lead qualification, follow-ups, market reports, compliance, and marketing, all running 24/7, connected to your CRM and every tool you use.",
+      "ChatGPT is a single tool you talk to. What we install is an entire AI workforce integrated into your operations — autonomous agents handling lead qualification, follow-ups, market analysis, and client communication around the clock, connected to your CRM and every tool you already use. They work while you sleep.",
   },
   {
     question: "What ROI should I expect?",
     answer:
-      "Our average client sees a 47x return within the first year. That translates to roughly 12 hours saved per broker per week and 3.2x more deals closed in the first 90 days. Every plan includes a 30-day ROI guarantee.",
+      "Our average client sees a 47x return within the first year. That translates to roughly 12 hours saved per broker per week and 3.2x more deals closed in the first 90 days. Every plan includes a 30-day ROI guarantee — if your AI systems don't pay for themselves in the first month, we work free until they do.",
   },
   {
     question: "Will AI replace me or my agents?",
     answer:
-      "No — it amplifies you. Think of it as giving every person on your team ten assistants. AI handles the repetitive work so you can focus on what closes deals: relationships, negotiations, and strategy.",
+      "No — it makes you dangerous. Think of it as giving every person on your team ten tireless assistants. AI handles the CRM updates, follow-up sequences, market reports, and compliance paperwork — so you can focus on what actually closes deals: relationships, negotiations, and strategy.",
   },
   {
     question: "How long does setup take?",
@@ -33,7 +43,7 @@ const faqs = [
   {
     question: "What if AI technology changes?",
     answer:
-      "We teach principles, not just tools. Our coaching gives you the framework to evaluate and adopt new AI tools as they emerge. Partner plan members get automatic upgrades as technology evolves.",
+      "That's why we teach frameworks, not just tools. Our coaching gives you the ability to evaluate and adopt new AI tools as they emerge — so you're never dependent on a single platform. Partner plan members get automatic upgrades as technology evolves.",
   },
   {
     question: "Do you work with teams or just solo brokers?",

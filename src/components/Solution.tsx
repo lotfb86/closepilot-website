@@ -59,11 +59,12 @@ export default function Solution() {
             What We Build
           </p>
           <h2 className="text-3xl md:text-[2.75rem] font-serif font-medium leading-[1.15] tracking-tight">
-            Everything a fifty-person team does. Except it&apos;s just AI.
+            Everything a fifty-person team does — built by AI, run by you.
           </h2>
           <p className="text-text-2 text-lg mt-5 leading-relaxed">
-            We don&apos;t just teach you about AI. We install an AI workforce
-            into your brokerage and train you to run it.
+            We don&apos;t just build your AI systems. We teach you to run
+            them, expand them, and own them completely. You&apos;ll never need
+            us again — but you&apos;ll want us around.
           </p>
         </motion.div>
 

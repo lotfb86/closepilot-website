@@ -23,12 +23,12 @@ const faqs = [
   {
     question: "How is this different from just using ChatGPT?",
     answer:
-      "ChatGPT is a single tool you talk to. What we install is an entire AI workforce integrated into your operations — autonomous agents handling lead qualification, follow-ups, market analysis, and client communication around the clock, connected to your CRM and every tool you already use. They work while you sleep.",
+      "ChatGPT is a single tool you talk to. What we teach you to build is an entire AI workforce integrated into your operations — autonomous agents handling lead qualification, follow-ups, market analysis, and client communication around the clock, connected to your CRM and every tool you already use.",
   },
   {
-    question: "What ROI should I expect?",
+    question: "Can you really change my business in two sessions?",
     answer:
-      "Our average client sees a 47x return within the first year. That translates to roughly 12 hours saved per broker per week and 3.2x more deals closed in the first 90 days. Every plan includes a 30-day ROI guarantee — if your AI systems don't pay for themselves in the first month, we work free until they do.",
+      "Yes — and here's why. We don't just teach you AI tools. We teach you how to let AI teach you. After two sessions, you'll have working systems running and the ability to keep building, learning, and improving on your own. AI becomes your ongoing coach. That's the multiplier.",
   },
   {
     question: "Will AI replace me or my agents?",
@@ -36,14 +36,9 @@ const faqs = [
       "No — it makes you dangerous. Think of it as giving every person on your team ten tireless assistants. AI handles the CRM updates, follow-up sequences, market reports, and compliance paperwork — so you can focus on what actually closes deals: relationships, negotiations, and strategy.",
   },
   {
-    question: "How long does setup take?",
-    answer:
-      "Launchpad gets your first AI agents running within two weeks. The full Accelerator transformation takes about four weeks. You'll see results within the first week — we prioritize quick wins that impact your pipeline immediately.",
-  },
-  {
     question: "What if AI technology changes?",
     answer:
-      "That's why we teach frameworks, not just tools. Our coaching gives you the ability to evaluate and adopt new AI tools as they emerge — so you're never dependent on a single platform. Partner plan members get automatic upgrades as technology evolves.",
+      "That's why we teach you how to let AI teach you. You'll have the framework to evaluate and adopt new tools as they emerge — no consultant required. And if you want a hand, our monthly coaching keeps you on the cutting edge.",
   },
   {
     question: "Do you work with teams or just solo brokers?",

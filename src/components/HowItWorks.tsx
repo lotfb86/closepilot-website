@@ -17,27 +17,27 @@ const steps = [
     ],
   },
   {
-    phase: "Week 1–4",
-    title: "Hands-On Coaching",
+    phase: "Session 1",
+    title: "Learn to Use AI in Your Business",
     description:
-      "We teach you to build and deploy AI agents, design automated workflows, and set up the systems that will run your brokerage. You learn by doing — with a coach guiding every step.",
+      "We sit down together and teach you how to build AI agents, design workflows, and automate the tasks that are eating your day. You leave this session with working systems already running.",
     details: [
-      "1-on-1 coaching sessions",
-      "AI agent building training",
-      "Workflow design & automation",
-      "Tool setup & configuration",
+      "Build your first AI agents",
+      "Automate key workflows",
+      "Set up marketing & content systems",
+      "Configure your tools & integrations",
     ],
   },
   {
-    phase: "Ongoing",
-    title: "Continuous Growth",
+    phase: "Session 2",
+    title: "Learn to Let AI Teach You",
     description:
-      "AI moves fast. Our ongoing coaching keeps you ahead — new tools, new techniques, new capabilities. Your brokerage gets smarter every month, and so do you.",
+      "This is the session that changes everything. We teach you how to use AI as your ongoing coach — so it keeps teaching you, keeps improving your systems, and keeps you ahead of the curve. After this, you don't need us anymore.",
     details: [
-      "Monthly coaching sessions",
-      "New tool & technique training",
-      "Strategy & performance reviews",
-      "Priority support between sessions",
+      "AI as your personal coach & advisor",
+      "Self-improving systems & workflows",
+      "Stay current without a consultant",
+      "Complete independence from day one",
     ],
   },
 ];
@@ -59,11 +59,11 @@ export default function HowItWorks() {
             Our Approach
           </p>
           <h2 className="text-3xl md:text-[2.75rem] font-serif font-medium leading-[1.15] tracking-tight">
-            Free deliverables first. Coaching when you&apos;re ready.
+            Two sessions. Complete transformation.
           </h2>
           <p className="text-text-2 text-lg mt-5 leading-relaxed">
-            No fluff. No theory. We start by proving what AI can do — then
-            we teach you to do it yourself.
+            We don&apos;t believe in long coaching programs. We believe in
+            teaching you so well that you never need us again.
           </p>
         </motion.div>
 

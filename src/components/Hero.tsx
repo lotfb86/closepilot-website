@@ -35,9 +35,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.35 }}
             className="text-lg md:text-xl text-text-2 max-w-xl mt-7 leading-relaxed"
           >
-            We install AI agents, intelligent workflows, and automated systems
-            into small real estate and lending brokerages — so you can
-            outperform anyone in your market.
+            We teach small real estate and lending brokerages to build AI
+            agents, automate their operations, and outperform anyone in their
+            market — in just two coaching sessions.
           </motion.p>
 
           {/* Offer callout */}

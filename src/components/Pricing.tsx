@@ -6,55 +6,35 @@ import { Check, ArrowRight } from "lucide-react";
 
 const plans = [
   {
-    name: "Foundations",
-    price: "2,497",
+    name: "The Transformation",
+    price: "2,997",
     period: "one-time",
     description:
-      "Learn to build and deploy your first AI agents, workflows, and automations — with hands-on coaching every step of the way.",
+      "Two coaching sessions that fundamentally change how your business operates. We teach you to use AI — and we teach you to let AI keep teaching you after we're gone.",
     features: [
-      "2 weeks of 1-on-1 coaching",
-      "Learn to build AI agents from scratch",
-      "Workflow automation training",
-      "AI-powered website coaching",
-      "Lead nurturing system setup",
-      "Tool selection & configuration guidance",
-      "30 days of follow-up support",
-    ],
-    highlight: false,
-  },
-  {
-    name: "Mastery",
-    price: "4,997",
-    period: "one-time",
-    description:
-      "The complete AI coaching program. We teach you to rebuild your entire operation with AI — marketing, operations, intelligence, everything.",
-    features: [
-      "Everything in Foundations",
-      "4 weeks of intensive coaching",
-      "Advanced agent building techniques",
-      "AI marketing & content systems",
-      "Competitive intelligence training",
-      "CRM & tool integration coaching",
-      "Custom workflow design sessions",
-      "90 days of follow-up support",
+      "2 intensive 1-on-1 coaching sessions",
+      "Learn to build and deploy AI agents",
+      "Workflow automation setup",
+      "AI-powered marketing & content",
+      "Tool selection & configuration",
+      "Learn to let AI become your ongoing coach",
+      "Your free $50K website & $30K audit included",
     ],
     highlight: true,
   },
   {
-    name: "Ongoing",
-    price: "1,997",
+    name: "Monthly Coaching",
+    price: "997",
     period: "/month",
     description:
-      "Continuous coaching as AI evolves. Stay ahead with monthly sessions, new techniques, and a dedicated coach in your corner.",
+      "For those who want to keep going. One session per month where we bring you the latest AI tools, help you implement further, and keep your brokerage on the cutting edge.",
     features: [
-      "Everything in Mastery",
-      "Monthly 1-on-1 coaching sessions",
-      "New tool & technique training",
-      "Priority support between sessions",
-      "AI strategy & roadmap updates",
-      "Dedicated coaching relationship",
-      "Quarterly business reviews",
-      "First access to new capabilities",
+      "1 coaching session per month",
+      "Latest AI tools & techniques",
+      "Continued implementation support",
+      "New capability deployment",
+      "Priority access between sessions",
+      "Cancel anytime",
     ],
     highlight: false,
   },
@@ -66,7 +46,7 @@ export default function Pricing() {
 
   return (
     <section id="pricing" className="relative py-24 lg:py-32 bg-accent-light">
-      <div ref={ref} className="max-w-6xl mx-auto px-6 lg:px-8">
+      <div ref={ref} className="max-w-4xl mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -77,16 +57,16 @@ export default function Pricing() {
             Investment
           </p>
           <h2 className="text-3xl md:text-[2.75rem] font-serif font-medium leading-[1.15] tracking-tight">
-            After your free website and audit, here&apos;s what comes next.
+            Two meetings. That&apos;s all it takes.
           </h2>
           <p className="text-text-2 text-lg mt-5 leading-relaxed">
-            Every engagement starts with $80,000 in free deliverables. When
-            you&apos;re ready to go deeper, every plan pays for itself within
-            the first month.
+            After your free website and AI audit, we sit down twice and
+            fundamentally change how your brokerage operates. No long programs.
+            No drawn-out timelines. Just two sessions that transform everything.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-6 items-start">
+        <div className="grid lg:grid-cols-2 gap-6 items-start">
           {plans.map((plan, i) => (
             <motion.div
               key={i}
@@ -101,7 +81,7 @@ export default function Pricing() {
             >
               {plan.highlight && (
                 <span className="inline-block text-[11px] uppercase tracking-[0.1em] font-medium text-white/50 bg-white/10 px-3 py-1 rounded-full mb-5">
-                  Most Popular
+                  The Core Program
                 </span>
               )}
 
@@ -157,7 +137,7 @@ export default function Pricing() {
               </div>
 
               <a
-                href="#"
+                href="#offer"
                 className={`group flex items-center justify-center gap-2 w-full py-3.5 rounded-full text-[14px] font-medium transition-all duration-300 ${
                   plan.highlight
                     ? "bg-white text-dark hover:bg-white/90"
@@ -180,8 +160,8 @@ export default function Pricing() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="text-center text-sm text-text-2 mt-12"
         >
-          30-day ROI guarantee — if your AI systems don&apos;t pay for
-          themselves in the first month, we work free until they do.
+          Every engagement starts with your free $50K website and $30K AI
+          audit — before you spend a dollar.
         </motion.p>
       </div>
     </section>

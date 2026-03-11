@@ -62,9 +62,9 @@ export default function Solution() {
             Everything a fifty-person team does — built by AI, run by you.
           </h2>
           <p className="text-text-2 text-lg mt-5 leading-relaxed">
-            We don&apos;t just build your AI systems. We teach you to run
-            them, expand them, and own them completely. You&apos;ll never need
-            us again — but you&apos;ll want us around.
+            In two sessions, we teach you to build and run all of this
+            yourself. And then we teach AI to keep coaching you after
+            we&apos;re gone.
           </p>
         </motion.div>
 
